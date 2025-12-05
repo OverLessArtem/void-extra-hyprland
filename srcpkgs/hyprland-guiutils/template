@@ -7,7 +7,7 @@ configure_args="--no-warn-unused-cli -DCMAKE_BUILD_TYPE:STRING=Release \
  -DCMAKE_INSTALL_PREFIX:PATH=/usr"
 hostmakedepends="cmake ninja pkgconf"
 makedepends="aquamarine cairo-devel hyprgraphics hyprlang
- hyprtoolkit hyprutils libdrm-devel pixman-devel"
+ hyprtoolkit hyprutils libdrm-devel pixman-devel libxkbcommon-devel"
 depends="hyprland-qt-support"
 short_desc="Hyprland GUI utilities (successor to hyprland-qtutils)"
 maintainer="Encoded14 <linusken@tuta.io>"
