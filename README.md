@@ -82,44 +82,6 @@ Currently packages are tested on / crosscompiled for the following architectures
 
 <hr>
 
-## Available packages
-
-> [!TIP]
-> Want to add one of your own templates? Open a Pull request.
-> 
-> Need a package that is not allowed in upstream? Open an Issue.
-
-| package | version | maintainer | notes |
-|:--------|:--------|:-----------|:------|
-| aquamarine                  | 0.10.0   | [Encoded14](https://github.com/Encoded14) | |
-| glaze                       | 6.1.0   | [Encoded14](https://github.com/Encoded14) | |
-| hyprcursor                  | 0.1.13  | [Encoded14](https://github.com/Encoded14) | |
-| hyprgraphics                | 0.4.0   | [Encoded14](https://github.com/Encoded14) | |
-| hypridle                    | 0.1.7   | [Encoded14](https://github.com/Encoded14) | |
-| hyprland-guiutils           | 0.2.0   | [Encoded14](https://github.com/Encoded14) | |
-| hyprland-protocols          | 0.7.0   | [Encoded14](https://github.com/Encoded14) | |
-| hyprland-qt-support         | 0.1.0   | [Encoded14](https://github.com/Encoded14) | |
-| hyprland                    | 0.52.2  | [Encoded14](https://github.com/Encoded14) | |
-| hyprlang                    | 0.6.7   | [Encoded14](https://github.com/Encoded14) | |
-| hyprlock                    | 0.9.2   | [Encoded14](https://github.com/Encoded14) | |
-| hyprpaper                   | 0.7.6   | [Encoded14](https://github.com/Encoded14) | |
-| hyprpicker                  | 0.4.5   | [Encoded14](https://github.com/Encoded14) | Due to this package being in the upstream repos you need to either build it manually or temporarily give this repo higher priority `sudo xbps-install --repository=https://raw.githubusercontent.com/Encoded14/void-extra/repository-x86_64 hyprpicker` |
-| hyprpolkitagent             | 0.1.3   | [Encoded14](https://github.com/Encoded14) | |
-| hyprshot                    | 1.3.0   | [Encoded14](https://github.com/Encoded14) | |
-| hyprsunset                  | 0.3.3   | [Encoded14](https://github.com/Encoded14) | |
-| hyprsysteminfo              | 0.1.3   | [Encoded14](https://github.com/Encoded14) | |
-| hyprtoolkit                 | 0.4.1   | [Encoded14](https://github.com/Encoded14) | |
-| hyprutils                   | 0.10.4  | [Encoded14](https://github.com/Encoded14) | |
-| hyprwayland-scanner         | 0.4.5   | [Encoded14](https://github.com/Encoded14) | |
-| xdg-desktop-portal-hyprland | 3.4.0   | [Encoded14](https://github.com/Encoded14) | |
-| libspng                     | 0.7.4   | [Encoded14](https://github.com/Encoded14) | |
-| ly                          | 1.0.3   | [Encoded14](https://github.com/Encoded14) | compatibility: i686 x86_64 only |
-| sdbus-cpp                   | 2.2.1   | [Encoded14](https://github.com/Encoded14) | |
-| tomlplusplus                | 3.4.0   | [Encoded14](https://github.com/Encoded14) | |
-| zen-browser (stable)        | 1.17.12b | [Encoded14](https://github.com/Encoded14) | compatibility: glibc only |
-
-<hr>
-
 ### Running Hyprland
 
 In order to run Hyprland you will need to install some additional packages which will depend on your setup, for example a [session and seat manager](https://docs.voidlinux.org/config/session-management.html) and [graphics drivers](https://docs.voidlinux.org/config/graphical-session/graphics-drivers/index.html). If you use an Nvidia GPU refer to the [Hyprland Wiki](https://wiki.hyprland.org/Nvidia), but keep in mind that Hyprland does not officially support Nvidia.
