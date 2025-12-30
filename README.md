@@ -9,9 +9,6 @@
 A collection of template files for building packages on Void Linux with xbps-src.
 If you don't wish to build the packages locally, this repository also provides prebuilt binaries.
 
-> [!WARNING]
-> The project has been renamed to void-extra to avoid confusion with Arch Linux’s AUR. Unlike the AUR, this repository is not intended as a way to add packages to Void Linux before they reach upstream. It is only a fallback for packages that have been rejected. See below for how to update your /etc/xbps.d/ entry.
-
 <hr>
 
 ## Installation
