@@ -1,10 +1,11 @@
---- a/hyprctl/main.cpp
-+++ b/hyprctl/main.cpp
-@@ -268,7 +268,7 @@ int requestIPC(std::string_view request, std::string_view instanceSignature, st
-         return 1;
-     }
-
+--- a/hyprctl/src/main.cpp	2026-01-02 19:02:34.939054405 -0500
++++ b/hyprctl/src/main.cpp	2026-01-02 19:02:45.791849036 -0500
+@@ -271,7 +271,7 @@
+     sockaddr_un serverAddress = {0};
+     serverAddress.sun_family  = AF_UNIX;
+ 
 -    std::string socketPath = getRuntimeDir() + "/" + instanceSignature + "/" + filename;
-+    std::string socketPath = getRuntimeDir() + "/" + std::string(instanceSignature) + "/" + std::string(filename);
-
-     int SERVERSOCKET = socket(AF_UNIX, SOCK_STREAM, 0);
++    std::string socketPath = getRuntimeDir() + "/" + instanceSignature + "/" + std::string(filename);
+ 
+     strncpy(serverAddress.sun_path, socketPath.c_str(), sizeof(serverAddress.sun_path) - 1);
+ 

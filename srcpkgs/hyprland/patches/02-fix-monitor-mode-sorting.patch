@@ -1,6 +1,6 @@
 --- a/src/helpers/Monitor.cpp
 +++ b/src/helpers/Monitor.cpp
-@@ -549,7 +549,9 @@
+@@ -632,7 +632,9 @@
          std::ranges::sort(sortedModes, sortFunc);
          if (sortedModes.size() > 3)
              sortedModes.erase(sortedModes.begin() + 3, sortedModes.end());
