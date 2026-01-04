@@ -25,6 +25,9 @@ aarch64)
 esac
 
 do_install() {
+    # Trying to get file under 100MB so github doesnt complain
+    rm -f "${DESTDIR}/opt/${pkgname}/fonts/TwemojiMozilla.ttf"
+
 	install -dm755 "${DESTDIR}/opt/${pkgname}" "${DESTDIR}/usr/bin" "${DESTDIR}/usr/share/applications" "${DESTDIR}/usr/share/pixmaps"
 
 	vinstall "${FILESDIR}/zen.desktop" 0644 usr/share/applications/
@@ -41,9 +44,6 @@ do_install() {
 		install -d ${DESTDIR}/usr/share/icons/hicolor/${size}x${size}/apps
 		vinstall browser/chrome/icons/default/default${size}.png 0644 usr/share/icons/hicolor/${size}x${size}/apps zen.png
 	done
-
-    # Trying to get file under 100MB so github doesnt complain
-    rm -f "${DESTDIR}/opt/${pkgname}/fonts/TwemojiMozilla.ttf"
 
 	ln -Ts /usr/share/hunspell "${DESTDIR}/opt/${pkgname}/dictionaries"
 	ln -Ts /usr/share/hyphen "${DESTDIR}/opt/${pkgname}/hyphenation"
