@@ -64,7 +64,9 @@ jobs:
             tip="${{ github.sha }}"
 
             if [ -z "$base" ] || [ "$base" = "0000000000000000000000000000000000000000" ]; then
-                changed_pkgs=$(find srcpkgs -maxdepth 1 -mindepth 1 -type d -printf "%f ")
+                changed_pkgs=$(find srcpkgs -maxdepth 1 -mindepth 1 -type d -printf "%f\n" \
+                  | grep -v '^zen-browser$' \
+                  | tr '\n' ' ')
                 removed_pkgs=""
             else
                 changed_pkgs=$(git diff --name-only "$base" "$tip" --diff-filter=AM -- 'srcpkgs/*/template' \
