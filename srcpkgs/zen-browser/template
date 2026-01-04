@@ -4,7 +4,7 @@ version=1.17.15b
 revision=1
 archs="x86_64 aarch64"
 hostmakedepends="curl xz"
-depends="desktop-file-utils hicolor-icon-theme libnotify libavcodec virtual?font:emoji xdg-utils"
+depends="desktop-file-utils hicolor-icon-theme libnotify libavcodec xdg-utils"
 short_desc="Welcome to a calmer internet"
 maintainer="Encoded14 <linusken@tuta.io>"
 license="MPL-2.0"
@@ -25,9 +25,6 @@ aarch64)
 esac
 
 do_install() {
-    # Trying to get file under 100MB so github doesnt complain
-    rm -f "${DESTDIR}/opt/${pkgname}/fonts/TwemojiMozilla.ttf"
-
 	install -dm755 "${DESTDIR}/opt/${pkgname}" "${DESTDIR}/usr/bin" "${DESTDIR}/usr/share/applications" "${DESTDIR}/usr/share/pixmaps"
 
 	vinstall "${FILESDIR}/zen.desktop" 0644 usr/share/applications/
