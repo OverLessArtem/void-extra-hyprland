@@ -4,8 +4,8 @@ version=0.2.1
 revision=1
 build_style=cmake
 configure_args="--no-warn-unused-cli -DCMAKE_BUILD_TYPE:STRING=Release \
- -DCMAKE_INSTALL_PREFIX:PATH=/usr"
-hostmakedepends="cmake pkgconf"
+ -DCMAKE_INSTALL_PREFIX:PATH=/usr -DBUILD_TESTING:BOOL=OFF"
+hostmakedepends="cmake pkgconf pugixml-devel"
 makedepends="hyprutils libffi-devel pugixml-devel"
 short_desc="A fast and consistent wire protocol for IPC"
 maintainer="Encoded14 <linusken@tuta.io>"
