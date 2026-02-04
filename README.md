@@ -51,7 +51,7 @@ Currently packages are tested on / crosscompiled for the following architectures
 6. Install the built packages:
 
     ```
-    sudo xbps-install --repository /hostdir/binpkgs/ <package1> <package2> ...
+    sudo xbps-install --repository hostdir/binpkgs/ <package1> <package2> ...
     ```
 
 </details>
